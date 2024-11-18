@@ -20,7 +20,7 @@ struct SuperheroSearcher: View {
                 .bold()
                 .foregroundColor(.white)
                 .padding(16)
-                .background(Color("backgroundApp").opacity(0.8)) // Fondo consistente
+                .background(Color(.blue).opacity(0.8)) // Fondo consistente
                 .cornerRadius(8)
                 .border(.blue, width: 1.5)
                 .padding(8)
@@ -48,11 +48,11 @@ struct SuperheroSearcher: View {
                     ZStack{
                         SuperheroItem(superhero: superhero)
                         NavigationLink(destination: SuperheroDetail(id:superhero.id)){EmptyView()}.opacity(0)
-                    }.listRowBackground(Color("backgroundApp")) // Asegura que el fondo de cada celda sea consistente
+                    }.listRowBackground(Color(.blue).opacity(20)) // Asegura que el fondo de cada celda sea consistente
                 }.listStyle(.plain) // Estilo de lista
             }
             Spacer() // Espaciador para alinear correctamente
-        }.frame(maxWidth: .infinity, maxHeight: .infinity).background(Color("backgroundApp"))
+        }.frame(maxWidth: .infinity, maxHeight: .infinity).background(Color(.blue).opacity(20))
     }
 }
 

@@ -29,7 +29,7 @@ struct IMCView: View {
             IMCCalculateButton(userWeight: Double(weight), userHeight: height)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("backgroundApp"))
+        .background(Color(.brown))
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text("IMC Calculator")

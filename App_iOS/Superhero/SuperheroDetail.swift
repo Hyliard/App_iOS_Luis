@@ -34,7 +34,7 @@ struct SuperheroDetail: View {
             }
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color("backgroundApp"))
+            .background(Color(.blue).opacity(20))
             .onAppear{
                 Task{
                     do{

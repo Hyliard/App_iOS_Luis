@@ -16,7 +16,7 @@ struct IMCResult: View {
             InformationView(result: result)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("backgroundApp"))
+        .background(Color(.brown))
     }
 }
 

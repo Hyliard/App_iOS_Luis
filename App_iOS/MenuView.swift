@@ -9,21 +9,50 @@ import SwiftUI
 
 struct MenuView: View {
     var body: some View {
-        NavigationStack{
-            List{
-                NavigationLink(destination:IMCView()){
-                    Text("IMC Calculator")
-                }
-                NavigationLink(destination:SuperheroSearcher()){
-                    Text("Superhero finder")
-                }
-                Text("Hyliard 1")
-                Text("Hyliard 2")
-                Text("Hyliard 3")
-                Text("Hyliard 4")
+        NavigationStack {
+            ZStack {
+                // Fondo oscuro para la vista principal
+                Color.black.opacity(20)
+                    .ignoresSafeArea()
                 
-            }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("backgroundApp"))
+                VStack {
+                    // Título de la vista
+                    Text("Main Menu")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.top, 50)
+                    
+                    // Lista de opciones
+                    List {
+                        // Opción de IMC Calculator
+                        NavigationLink(destination: IMCView()) {
+                            Text("IMC Calculator")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Color.blue.opacity(0.7))
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                        }
+
+                        // Opción de Superhero Finder
+                        NavigationLink(destination: SuperheroSearcher()) {
+                            Text("Superhero Finder")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Color.green.opacity(0.7))
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                        }
+                    }
+                    .listStyle(PlainListStyle())
+                    .padding(.top, 20)
+                }
+            }
         }
     }
 }
